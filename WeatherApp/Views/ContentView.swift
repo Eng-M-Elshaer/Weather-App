@@ -24,7 +24,8 @@ struct ContentView: View {
                     LoadingView()
                         .task {
                             do {
-                                weather = try await weatherManger.getCurrentWeather(lat: location.latitude, long: location.longitude)
+                                weather = try await weatherManger.getCurrentWeather(lat: location.latitude, 
+                                                                                    long: location.longitude)
                             } catch {
                                 print(error.localizedDescription)
                             }
